@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "annoucement": {
+      "type": "annoucement",
+      "settings": {
+        "show_announcement": true,
+        "homepage_only": true,
+        "show_close": true,
+        "rotate_speed": 5000,
+        "message_1": "🎁 Free Gift with Every Order | Limited Time Only\nWelcome to Mimisti ✨",
+        "message_1_link": "",
+        "message_2": "🚚 Free Delivery on Bank Transfer Orders Above Rs. 5,999",
+        "message_2_link": "",
+        "message_3": "📸 Tag @mimisti.pk on Instagram & Get 10% OFF Your Next Order",
+        "message_3_link": "",
+        "show_divider": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "5e153016-a9d7-46c9-a10e-30d16446793d": {
+          "type": "topbar",
+          "disabled": true,
+          "settings": {
+            "show_divider": true,
+            "show_phone_numb": false,
+            "show_email": false,
+            "show_social_links": true,
+            "show_stores_page": false,
+            "show_currency_switcher": true,
+            "show_country_selector": false,
+            "show_language_switcher": true,
+            "alert_message": "<span>Open Doors To A World Of Fashion  |  <a class=\"sf__text-link  ml-1 underline\" href=\"#\">Discover More</a><span></span></span>"
+          }
+        }
+      },
+      "block_order": [
+        "5e153016-a9d7-46c9-a10e-30d16446793d"
+      ],
+      "settings": {
+        "header_design": "logo-center__2l",
+        "container": "container-fluid",
+        "header_sticky": false,
+        "transparent_on_top": false,
+        "logo_text": "",
+        "logo": "shopify://shop_images/Untitled_design_19.png",
+        "logo_svg": "",
+        "logo_mobile_svg": "",
+        "logo_transparent_svg": "",
+        "logo_max_width": 145,
+        "sticky_logo_max_width": 145,
+        "mobile_logo_max_width": 110,
+        "main_menu": "",
+        "secondary_menu": "",
+        "mobile_menu": "",
+        "uppercase_parent_level": false,
+        "show_menu_column_divider": true,
+        "search": "show_icon",
+        "show_account_icon": true,
+        "show_cart_icon": true,
+        "show_wishlist_icon": true,
+        "show_compare_icon": false,
+        "show_currency_switcher": false,
+        "show_country_selector": false,
+        "show_language_switcher": false,
+        "mb_show_currency_switcher": false,
+        "mb_show_country_selector": false,
+        "mb_show_language_switcher": false
+      }
+    },
+    "1784662720322ce065": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_334b191_twyzgd": {
+          "type": "ai_gen_block_334b191",
+          "settings": {
+            "link_1_type": "collection",
+            "link_1_page": "",
+            "link_1_collection": "frontpage",
+            "link_2_type": "collection",
+            "link_2_page": "",
+            "link_2_collection": "new-arrival",
+            "link_3_type": "collection",
+            "link_3_page": "",
+            "link_3_collection": "tops",
+            "link_4_type": "collection",
+            "link_4_page": "",
+            "link_4_collection": "bottoms",
+            "link_5_type": "collection",
+            "link_5_page": "",
+            "link_5_collection": "bundles",
+            "link_6_type": "collection",
+            "link_6_page": "",
+            "link_6_collection": "accessories",
+            "link_7_type": "collection",
+            "link_7_page": "",
+            "link_7_collection": "shop-all",
+            "alignment": "center",
+            "mobile_alignment": "center",
+            "desktop_width_percent": 100,
+            "padding_vertical": 16,
+            "padding_horizontal": 20,
+            "link_spacing": 30,
+            "show_separator": false,
+            "separator_text": "",
+            "separator_color": "#cccccc",
+            "background_color": "#ffffff",
+            "link_color": "#000000",
+            "link_hover_color": "#000000",
+            "border_color": "#eeeeee",
+            "font_size": 16,
+            "font_weight": "400",
+            "link_padding": 8,
+            "show_underline": true,
+            "border_width": 1
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_334b191_twyzgd"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "annoucement",
+    "header",
+    "1784662720322ce065"
+  ]
+}

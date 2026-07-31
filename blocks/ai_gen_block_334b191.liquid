@@ -1,0 +1,509 @@
+{% doc %}
+  @prompt
+    A line to add pages to , make it able to link collections as well
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-page-nav-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    border-top: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    border-bottom: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-page-nav__container-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: {{ block.settings.alignment }};
+    align-items: center;
+    gap: {{ block.settings.link_spacing }}px;
+    flex-wrap: wrap;
+  }
+
+  .ai-page-nav__link-{{ ai_gen_id }} {
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    transition: color 0.3s ease;
+    padding: {{ block.settings.link_padding }}px 0;
+    position: relative;
+  }
+
+  .ai-page-nav__link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  {% if block.settings.show_underline %}
+    .ai-page-nav__link-{{ ai_gen_id }}::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: {{ block.settings.link_hover_color }};
+      transition: width 0.3s ease;
+    }
+
+    .ai-page-nav__link-{{ ai_gen_id }}:hover::after {
+      width: 100%;
+    }
+  {% endif %}
+
+  .ai-page-nav__separator-{{ ai_gen_id }} {
+    color: {{ block.settings.separator_color }};
+    font-size: {{ block.settings.font_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-page-nav-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-page-nav__container-{{ ai_gen_id }} {
+      justify-content: {{ block.settings.mobile_alignment }};
+      gap: {{ block.settings.link_spacing | times: 0.8 }}px;
+    }
+
+    .ai-page-nav__link-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<nav class="ai-page-nav-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-page-nav__container-{{ ai_gen_id }}">
+    {% liquid
+      assign link_1_url = ''
+      assign link_1_title = ''
+      assign link_2_url = ''
+      assign link_2_title = ''
+      assign link_3_url = ''
+      assign link_3_title = ''
+      assign link_4_url = ''
+      assign link_4_title = ''
+      assign link_5_url = ''
+      assign link_5_title = ''
+      assign link_6_url = ''
+      assign link_6_title = ''
+      assign link_7_url = ''
+      assign link_7_title = ''
+
+      if block.settings.link_1_type == 'page' and block.settings.link_1_page != blank
+        assign link_1_url = block.settings.link_1_page.url
+        assign link_1_title = block.settings.link_1_page.title
+      elsif block.settings.link_1_type == 'collection' and block.settings.link_1_collection != blank
+        assign link_1_url = block.settings.link_1_collection.url
+        assign link_1_title = block.settings.link_1_collection.title
+      endif
+
+      if block.settings.link_2_type == 'page' and block.settings.link_2_page != blank
+        assign link_2_url = block.settings.link_2_page.url
+        assign link_2_title = block.settings.link_2_page.title
+      elsif block.settings.link_2_type == 'collection' and block.settings.link_2_collection != blank
+        assign link_2_url = block.settings.link_2_collection.url
+        assign link_2_title = block.settings.link_2_collection.title
+      endif
+
+      if block.settings.link_3_type == 'page' and block.settings.link_3_page != blank
+        assign link_3_url = block.settings.link_3_page.url
+        assign link_3_title = block.settings.link_3_page.title
+      elsif block.settings.link_3_type == 'collection' and block.settings.link_3_collection != blank
+        assign link_3_url = block.settings.link_3_collection.url
+        assign link_3_title = block.settings.link_3_collection.title
+      endif
+
+      if block.settings.link_4_type == 'page' and block.settings.link_4_page != blank
+        assign link_4_url = block.settings.link_4_page.url
+        assign link_4_title = block.settings.link_4_page.title
+      elsif block.settings.link_4_type == 'collection' and block.settings.link_4_collection != blank
+        assign link_4_url = block.settings.link_4_collection.url
+        assign link_4_title = block.settings.link_4_collection.title
+      endif
+
+      if block.settings.link_5_type == 'page' and block.settings.link_5_page != blank
+        assign link_5_url = block.settings.link_5_page.url
+        assign link_5_title = block.settings.link_5_page.title
+      elsif block.settings.link_5_type == 'collection' and block.settings.link_5_collection != blank
+        assign link_5_url = block.settings.link_5_collection.url
+        assign link_5_title = block.settings.link_5_collection.title
+      endif
+
+      if block.settings.link_6_type == 'page' and block.settings.link_6_page != blank
+        assign link_6_url = block.settings.link_6_page.url
+        assign link_6_title = block.settings.link_6_page.title
+      elsif block.settings.link_6_type == 'collection' and block.settings.link_6_collection != blank
+        assign link_6_url = block.settings.link_6_collection.url
+        assign link_6_title = block.settings.link_6_collection.title
+      endif
+
+      if block.settings.link_7_type == 'page' and block.settings.link_7_page != blank
+        assign link_7_url = block.settings.link_7_page.url
+        assign link_7_title = block.settings.link_7_page.title
+      elsif block.settings.link_7_type == 'collection' and block.settings.link_7_collection != blank
+        assign link_7_url = block.settings.link_7_collection.url
+        assign link_7_title = block.settings.link_7_collection.title
+      endif
+    %}
+
+    {% if link_1_url != blank %}
+      <a href="{{ link_1_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_1_title }}
+      </a>
+      {% if block.settings.show_separator and link_2_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_2_url != blank %}
+      <a href="{{ link_2_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_2_title }}
+      </a>
+      {% if block.settings.show_separator and link_3_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_3_url != blank %}
+      <a href="{{ link_3_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_3_title }}
+      </a>
+      {% if block.settings.show_separator and link_4_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_4_url != blank %}
+      <a href="{{ link_4_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_4_title }}
+      </a>
+      {% if block.settings.show_separator and link_5_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_5_url != blank %}
+      <a href="{{ link_5_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_5_title }}
+      </a>
+      {% if block.settings.show_separator and link_6_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_6_url != blank %}
+      <a href="{{ link_6_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_6_title }}
+      </a>
+      {% if block.settings.show_separator and link_7_url != blank %}
+        <span class="ai-page-nav__separator-{{ ai_gen_id }}">{{ block.settings.separator_text }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if link_7_url != blank %}
+      <a href="{{ link_7_url }}" class="ai-page-nav__link-{{ ai_gen_id }}">
+        {{ link_7_title }}
+      </a>
+    {% endif %}
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Page navigation",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Link 1"
+    },
+    {
+      "type": "select",
+      "id": "link_1_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_1_page", "label": "Page" },
+    { "type": "collection", "id": "link_1_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 2"
+    },
+    {
+      "type": "select",
+      "id": "link_2_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_2_page", "label": "Page" },
+    { "type": "collection", "id": "link_2_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 3"
+    },
+    {
+      "type": "select",
+      "id": "link_3_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_3_page", "label": "Page" },
+    { "type": "collection", "id": "link_3_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 4"
+    },
+    {
+      "type": "select",
+      "id": "link_4_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_4_page", "label": "Page" },
+    { "type": "collection", "id": "link_4_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 5"
+    },
+    {
+      "type": "select",
+      "id": "link_5_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_5_page", "label": "Page" },
+    { "type": "collection", "id": "link_5_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 6"
+    },
+    {
+      "type": "select",
+      "id": "link_6_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_6_page", "label": "Page" },
+    { "type": "collection", "id": "link_6_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Link 7"
+    },
+    {
+      "type": "select",
+      "id": "link_7_type",
+      "label": "Link type",
+      "options": [
+        { "value": "page", "label": "Page" },
+        { "value": "collection", "label": "Collection" }
+      ],
+      "default": "page"
+    },
+    { "type": "page", "id": "link_7_page", "label": "Page" },
+    { "type": "collection", "id": "link_7_collection", "label": "Collection" },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Desktop alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" },
+        { "value": "space-between", "label": "Space between" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_alignment",
+      "label": "Mobile alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Padding top and bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Padding left and right",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "link_spacing",
+      "label": "Space between links",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Separator"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separator",
+      "label": "Show separator",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "separator_text",
+      "label": "Separator character",
+      "default": "|"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#eeeeee"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "link_padding",
+      "label": "Link padding",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Effects"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_underline",
+      "label": "Show underline on hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    }
+  ],
+  "presets": [
+    { "name": "Page navigation" }
+  ]
+}
+{% endschema %}

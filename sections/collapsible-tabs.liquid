@@ -1,0 +1,275 @@
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign has_bg = false
+  unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank
+    assign has_bg = true
+  endunless
+
+  assign animation_effect = settings.animations
+  assign animated = false
+  if animation_effect != 'none'
+    assign animated = true
+    if section.settings.animations != 'inherit'
+      assign animation_effect = section.settings.animations
+    endif
+  endif
+
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+-%}
+{% if section.blocks.size > 0 %}
+  <section
+    class="m-section m-collapsible-section"
+    data-section-type="m-collapsible"
+    data-section-id="{{ section.id }}"
+    {% if has_bg %}
+      data-bg="{{ bg_color | color_to_hsl }}"
+      style="background-color: {{ bg_color }};"
+    {% endif %}
+  >
+    <div class="{{ container }}{% if has_bg == false %} m-section-my{% else %} m-section-py{% endif %}">
+      {% render 'index-section-header', section_settings: section.settings %}
+      <div class="m-collapsible-section__wrapper{% if template == 'product' %} m-product-collapsible{% endif %}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}">
+        {% for block in section.blocks %}
+          <collapsible-tab
+            class="m-collapsible no-js-hidden"
+            data-block-id="collapsible-tab-{{ block.id }}"
+            {% if block.settings.open %}
+              open="true"
+            {% endif %}
+          >
+            <h3 class="m-collapsible--button" data-trigger>
+              <span>{{ block.settings.header }}</span>
+              <span class="m-collapsible--icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.5306 6.53073L8.5306 11.5307C8.46092 11.6007 8.37813 11.6561 8.28696 11.694C8.1958 11.7318 8.09806 11.7513 7.99935 11.7513C7.90064 11.7513 7.8029 11.7318 7.71173 11.694C7.62057 11.6561 7.53778 11.6007 7.4681 11.5307L2.4681 6.53073C2.3272 6.38984 2.24805 6.19874 2.24805 5.99948C2.24805 5.80023 2.3272 5.60913 2.4681 5.46823C2.60899 5.32734 2.80009 5.24818 2.99935 5.24818C3.19861 5.24818 3.3897 5.32734 3.5306 5.46823L7.99997 9.93761L12.4693 5.46761C12.6102 5.32671 12.8013 5.24756 13.0006 5.24756C13.1999 5.24756 13.391 5.32671 13.5318 5.46761C13.6727 5.60851 13.7519 5.7996 13.7519 5.99886C13.7519 6.19812 13.6727 6.38921 13.5318 6.53011L13.5306 6.53073Z" fill="currentColor"/>
+                </svg>
+              </span>
+            </h3>
+            <div class="m-collapsible--content" data-content hidden>
+              <div class="m-collapsible--content__inner">
+                {% case block.type %}
+                  {% when 'item' %}
+                    {{ block.settings.content }}
+                    {{ block.settings.content_page.content }}
+                  {% when 'liquid' %}
+                    {{ block.settings.custom_liquid }}
+                  {% else %}
+                {% endcase %}
+              </div>
+            </div>
+          </collapsible-tab>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collapsible tabs",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Fixed width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Stretched width"
+        },
+        {
+          "value": "container-narrow",
+          "label": "Narrow width"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h3",
+      "options": [
+        {
+          "label": "Medium",
+          "value": "h3"
+        },
+        {
+          "label": "Large",
+          "value": "h2"
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Animations"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Visible in the view animation",
+      "default": "inherit",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Inherit global setting"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade in"
+        },
+        {
+          "value": "fade-in-up",
+          "label": "Fade in up"
+        },
+        {
+          "value": "fade-in-left",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fade-in-right",
+          "label": "Fade in right"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Custom content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Collapsible tab",
+          "default": "Collapsible tab heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Accordion content",
+          "default": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.</p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.</p>"
+        },
+        {
+          "type": "page",
+          "id": "content_page",
+          "label": "Tab content from page"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Default open"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Custom liquid",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Tab heading",
+          "default": "Tab heading"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible tabs",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

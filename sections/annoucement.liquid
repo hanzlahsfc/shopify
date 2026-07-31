@@ -1,0 +1,200 @@
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+{% if section.settings.show_announcement %}
+    {% if section.settings.homepage_only == false or request.page_type == 'index' %}
+        {% liquid
+          assign messages = ''
+          if section.settings.message_1 != blank
+            assign messages = messages | append: section.settings.message_1 | append: '|||'
+          endif
+          if section.settings.message_2 != blank
+            assign messages = messages | append: section.settings.message_2 | append: '|||'
+          endif
+          if section.settings.message_3 != blank
+            assign messages = messages | append: section.settings.message_3 | append: '|||'
+          endif
+          assign message_list = messages | split: '|||'
+        %}
+        {% if message_list.size > 0 %}
+            {% style %}
+                .m-announcement-bar {
+                  background-color: {{ settings.color_annoucement_bg | default: '#222' }};
+                  position: relative;
+                  z-index: 60;
+                  overflow: hidden;
+                  {% if section.settings.show_divider %}
+                  border-bottom: 1px solid var(--color-border);
+                  {% endif %}
+                }
+                .m-announcement-bar__content, .m-announcement-bar__close {
+                  color: {{ settings.color_annoucement_text | default: '#fff' }}
+                }
+                .m-announcement-bar a:hover {
+                  opacity: .6;
+                }
+                .m-announcement-bar__slider {
+                  position: relative;
+                  width: 100%;
+                  min-height: 1.2em;
+                }
+                .m-announcement-bar__slide {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  opacity: 0;
+                  visibility: hidden;
+                  transform: translateY(8px);
+                  transition: opacity .5s ease, transform .5s ease, visibility .5s;
+                }
+                .m-announcement-bar__slide.is-active {
+                  position: relative;
+                  opacity: 1;
+                  visibility: visible;
+                  transform: translateY(0);
+                }
+            {% endstyle %}
+            <section
+                data-section-id="{{ section.id }}"
+                data-section-type="announcement"
+                class="m-announcement-bar"
+            >
+                <div class="m-announcement-bar__slider" data-announcement-slider data-interval="{{ section.settings.rotate_speed | default: 2000 }}">
+                    {% for message in message_list %}
+                        <div class="m-announcement-bar__slide{% if forloop.first %} is-active{% endif %}" data-slide>
+                            {%- assign link_key = 'message_' | append: forloop.index | append: '_link' -%}
+                            {%- assign message_link = section.settings[link_key] -%}
+                            {%- unless message_link == blank -%}
+                                <a href="{{ message_link }}" class="m-announcement-bar__link">
+                            {%- endunless -%}
+                                <div class="m-announcement-bar__content">{{ message }}</div>
+                            {%- unless message_link == blank -%}
+                                </a>
+                            {%- endunless -%}
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if section.settings.show_close %}
+                    <div class="m-announcement-bar__close m:flex m:items-center">
+                        <svg class="m-svg-icon--medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                {% endif %}
+            </section>
+            <script>
+                (function () {
+                    var bar = document.querySelector('.m-announcement-bar');
+                    if (!bar) return;
+
+                    var closeBtn = bar.querySelector('.m-announcement-bar__close');
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', function () {
+                            bar.remove();
+                            document.documentElement.style.setProperty('--m-announcement-height', '0px');
+                        });
+                    }
+
+                    var slider = bar.querySelector('[data-announcement-slider]');
+                    if (!slider) return;
+                    var slides = slider.querySelectorAll('[data-slide]');
+                    if (slides.length <= 1) return;
+
+                    var interval = parseInt(slider.getAttribute('data-interval'), 10) || 2000;
+                    var current = 0;
+
+                    setInterval(function () {
+                        slides[current].classList.remove('is-active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.add('is-active');
+                    }, interval);
+                })();
+            </script>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "[Watch tutorial](https://foxecom.link/zDfFJy)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "homepage_only",
+      "label": "Home page only",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_close",
+      "label": "Show close button",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rotate_speed",
+      "label": "Rotate every (ms)",
+      "min": 1000,
+      "max": 8000,
+      "step": 500,
+      "default": 2000
+    },
+    {
+      "type": "header",
+      "content": "Message 1"
+    },
+    {
+      "type": "textarea",
+      "id": "message_1",
+      "label": "Message",
+      "default": "Free shipping for all orders from $60+"
+    },
+    {
+      "type": "url",
+      "id": "message_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Message 2"
+    },
+    {
+      "type": "textarea",
+      "id": "message_2",
+      "label": "Message"
+    },
+    {
+      "type": "url",
+      "id": "message_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Message 3"
+    },
+    {
+      "type": "textarea",
+      "id": "message_3",
+      "label": "Message"
+    },
+    {
+      "type": "url",
+      "id": "message_3_link",
+      "label": "Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show divider",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,832 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "c72959ad-9620-4e94-ae33-1bde908e9701": {
+      "type": "custom-code",
+      "settings": {
+        "custom_css": ":root {\n--spacing-sections-desktop: 120px;\n  --spacing-sections-tablet: 60px;\n  --spacing-sections-mobile: 48px;\n}\n.sf-home__collection-list .m-collection-card__link {\n  font-size: 24px;\n  line-height: 1.4;\n  font-weight: 400;\n}\n\n.sf-icon-box--large .m-icon-box__heading {\n  font-weight: 400;\n}\n.sf-icon-box--large .m-icon-box .m-button {\n  margin-top: 16px;\n}\n\n.m-richtext__subtitle,\n.m-lookbook__subheading {\n  font-weight: 500;\n}\n.sf-custom--collection-banner .container-full {\n  padding-left: 0;\n  padding-right: 0;\n}\n.sf-custom--collection-banner .m-image-card--button-fixed .m-button--fixed {\n  border-color: #e2e2e2;\n  padding-bottom: 20px;\n}\n.sf-custom--collection-banner .m-richtext__title {\n  line-height: 1.3;\n}\n\n.m-lookbook__header .m-lookbook__heading {\n  font-size: 29px;\n}\n@media (min-width: 768px) {\n  .sf-custom--collection-banner .m-image-card--button-fixed .m-button--fixed {\n    padding-bottom: 40px;\n    padding-top: 24px;\n  }\n  .sf-icon-box--large .m-icon-box__heading {\n    font-size: 32px;\n  }\n  .sf-icon-box--large .m-icon-box .m-button {\n    margin-top: 24px;\n  }\n}\n@media (min-width: 1024px) {\n  .m-footer--block-newsletter .m-footer--block-title {\n    font-size: 28px;\n    font-weight: 400;\n  }\n  .sf-custom--collection-banner .m-image-card__content {\n    padding-top: 70px;\n  }\n}\n@media (min-width: 1280px) {\n  .m-lookbook__header .m-lookbook__heading {\n    font-size: 42px;\n    line-height: 52px;\n  }\n  .sf-custom--collection-banner .m-richtext__subtitle,\n  .m-lookbook__header .m-lookbook__subheading {\n    font-size: 20px;\n    margin-bottom: 24px;\n  }\n}\n@media (min-width: 1536px) {\n  .sf-home__slideshow .m-slide__title {\n    font-size: 70px;\n    line-height: 80px;\n    margin-bottom: 40px;\n  }\n  .sf-custom--collection-banner .m-image-card__content {\n    padding-top: 110px;\n  }\n}\n\n@media (max-width: 767px) {\n  .sf-custom--collection-banner .m-image-card__content {\n    padding-bottom: 25px;\n    padding-top: 30px;\n  }\n  .sf-custom--collection-banner .m-image-card--button-fixed .m-button--fixed {\n    justify-content: center;\n    gap: 10px;\n    border: 0;\n    padding-bottom: 25px;\n  }\n  .sf-home__slideshow.m-slider--content-stack .m-slide__wrapper {\n    padding-top: 32px;\n  }\n  .sf-home__collection-list.m-collection-list .m-slider-controls,\n  .sf-home__collection-list .m-section__heading {\n    text-align: center;\n  }\n  body .m-lookbook__subheading {\n    margin-bottom: 12px;\n  }\n}"
+      }
+    },
+    "1621243260e1af0c20": {
+      "type": "slider",
+      "blocks": {
+        "1621243260e1af0c20-0": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/8d08e81a-d81a-483c-bbc5-750c273980d8.png",
+            "mb_background": "shopify://shop_images/kids-show-mom-some-love.jpg",
+            "content_in_container": false,
+            "content_position": "left middle",
+            "text_alignment": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "subheading": "Collection",
+            "title": "Comfortable, premium <br> kidswear designed for little <br> girls to shine every day.",
+            "description": "",
+            "image_link": "",
+            "button_text": "Shop Collection",
+            "button_link": "shopify://collections/articles",
+            "button_style": "m-button--white",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "start",
+            "footer_text": "",
+            "footer_button": "Shop Now",
+            "footer_link": ""
+          }
+        },
+        "slider_item_jbKDdM": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/kids-loving-mom.jpg",
+            "mb_background": "shopify://shop_images/sisters-sit-together-reading-a-book.jpg",
+            "content_in_container": false,
+            "content_position": "left middle",
+            "text_alignment": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "subheading": "Collection",
+            "title": "Fresh styles crafted with <br> soft fabrics, timeless designs, <br> and all-day comfort for every <br> little adventure.",
+            "description": "",
+            "image_link": "",
+            "button_text": "Shop New Arrivals",
+            "button_link": "shopify://collections/articles",
+            "button_style": "m-button--white",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "start",
+            "footer_text": "",
+            "footer_button": "Shop Now",
+            "footer_link": ""
+          }
+        },
+        "slider_item_VQ6QCW": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify://shop_images/young-boy-pushes-sister-on-swing.jpg",
+            "mb_background": "shopify://shop_images/girl-by-brick-wall.jpg",
+            "content_in_container": false,
+            "content_position": "left middle",
+            "text_alignment": "left",
+            "text_size": "medium",
+            "text_color": "white",
+            "subheading": "Collection",
+            "title": "From everyday essentials to <br> matching accessories, discover <br> everything your little one needs <br> in one place.",
+            "description": "",
+            "image_link": "",
+            "button_text": "Shop Accessories",
+            "button_link": "shopify://collections/articles",
+            "button_style": "m-button--white",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "start",
+            "footer_text": "",
+            "footer_button": "Shop Now",
+            "footer_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1621243260e1af0c20-0",
+        "slider_item_jbKDdM",
+        "slider_item_VQ6QCW"
+      ],
+      "settings": {
+        "container": "w-full",
+        "slideshow_height": "adapt",
+        "show_overlay": true,
+        "dots_position": "right",
+        "dots_style": "default",
+        "dots_color": "dark",
+        "show_dots": true,
+        "show_arrows": false,
+        "autorotate": true,
+        "autorotate_speed": 4,
+        "use_content_above": false,
+        "custom_class": "sf-home__slideshow",
+        "animations": "inherit"
+      }
+    },
+    "16225316461d1cff80": {
+      "type": "collection-list",
+      "blocks": {
+        "65e38235-f03b-43c9-8590-38c9c656e51c": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "new-arrival",
+            "title": "",
+            "item_image": "shopify://shop_images/pexels-yankrukov-8430290.jpg"
+          }
+        },
+        "694c01c9-a95f-4c09-9cf0-ec75f0131e98": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "bundles",
+            "title": "Made for comfort and play",
+            "item_image": "shopify://shop_images/pexels-vlada-karpovich-4609046.jpg"
+          }
+        },
+        "16225316461d1cff80-1": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "accessories",
+            "title": "The perfect finishing touch",
+            "item_image": "shopify://shop_images/pexels-xhemphoto-16222075.jpg"
+          }
+        },
+        "6d4abb37-5aa2-4499-a2b0-5d85f0d36eec": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "bottoms",
+            "title": "Timeless styles for every occasion",
+            "item_image": "shopify://shop_images/pexels-krishna-kids-photography-2148372889-38624435.jpg"
+          }
+        },
+        "12985deb-0775-45ce-80f6-6be7f3150a91": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "accessories",
+            "title": "Accessories"
+          }
+        },
+        "16225316461d1cff80-2": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "shoes",
+            "title": "Shoes"
+          }
+        },
+        "07ebf095-1da2-4546-87f3-97e73a789e8d": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "basic",
+            "title": "Basic"
+          }
+        },
+        "7a571158-7686-4e66-a693-4716fc905604": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "tops",
+            "title": "Tops"
+          }
+        }
+      },
+      "block_order": [
+        "65e38235-f03b-43c9-8590-38c9c656e51c",
+        "694c01c9-a95f-4c09-9cf0-ec75f0131e98",
+        "16225316461d1cff80-1",
+        "6d4abb37-5aa2-4499-a2b0-5d85f0d36eec",
+        "12985deb-0775-45ce-80f6-6be7f3150a91",
+        "16225316461d1cff80-2",
+        "07ebf095-1da2-4546-87f3-97e73a789e8d",
+        "7a571158-7686-4e66-a693-4716fc905604"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "SHOP BY CATEGORY",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "container": "container-fluid",
+        "background_color": "",
+        "layout": "grid",
+        "expanded": true,
+        "card_style": "inside",
+        "text_alignment": "center",
+        "hover_effect": "scaling-up",
+        "show_product_count": false,
+        "count_inline_title": true,
+        "image_rounded": false,
+        "items_per_row": 3,
+        "item_gap": 40,
+        "enable_slider": true,
+        "show_pagination": true,
+        "show_navigation": true,
+        "autorotate": false,
+        "autorotate_speed": 4,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "mobile_gap": 16,
+        "hidden_slide_control_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "sf-home__collection-list",
+        "animations": "inherit"
+      }
+    },
+    "162251092958fcda7c": {
+      "type": "product-tabs",
+      "blocks": {
+        "162251092958fcda7c-1": {
+          "type": "tab",
+          "settings": {
+            "title": "new arrivals",
+            "collection": "accessories"
+          }
+        },
+        "162251092958fcda7c-0": {
+          "type": "tab",
+          "settings": {
+            "title": "best sellers",
+            "collection": "bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "162251092958fcda7c-1",
+        "162251092958fcda7c-0"
+      ],
+      "settings": {
+        "heading": "You are in",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "tab_header": "select",
+        "limit": 10,
+        "show_button": true,
+        "button_type": "link",
+        "button_label": "Shop All Products",
+        "button_style": "m-button--secondary",
+        "button_size": "",
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "items_per_row": 5,
+        "item_gap": 30,
+        "enable_slider": false,
+        "show_navigation": false,
+        "show_pagination": false,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "sf-home__product-tab",
+        "animations": "inherit"
+      }
+    },
+    "image_with_text_2_ARXz7P": {
+      "type": "image-with-text-2",
+      "name": "Image with text overlay",
+      "settings": {
+        "container": "w-full",
+        "hero_size": "adapt",
+        "show_overlay": true,
+        "image": "shopify://shop_images/Untitled_design.jpgvv.jpg",
+        "bg_position": "center",
+        "image_link": "",
+        "parallax": false,
+        "content_in_container": false,
+        "content_position": "center middle",
+        "text_alignment": "center",
+        "text_size": "medium",
+        "text_color": "white",
+        "title": "",
+        "subtitle": "",
+        "text": "<h4>The most personal gift is one that was made for exactly one person. Our monogramming and personalization turns something already beautiful into something entirely yours — or entirely theirs. Add initials. Add a name. Add meaning.</h4>",
+        "button_label": "Monogram Shop",
+        "button_link": "",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "text_alignment_mobile": "center",
+        "use_content_above": false,
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_bg_zoom_effect": true
+      }
+    },
+    "7731d6df-9d53-4c34-9efb-98fac2fa365d": {
+      "type": "icon-box",
+      "blocks": {
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/pexels-80157002-9035771.jpg",
+            "image_by_url": "",
+            "title": "The Cashmere Cardigan",
+            "description": "<p>Add a free personalized note during checkout.</p>",
+            "link": "",
+            "button_label": "Shop Cardigans",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--secondary",
+            "button_size": ""
+          }
+        },
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-0": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/pexels-yankrukov-8430290.jpg",
+            "image_by_url": "",
+            "title": "The Italian Chelsea Boot",
+            "description": "<p>Brittany Bathgate shows how less is more.</p>",
+            "link": "",
+            "button_label": "Shop bags",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--secondary",
+            "button_size": ""
+          }
+        },
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/pexels-dima-valkov-1186343-9322333_1.jpg",
+            "image_by_url": "",
+            "title": "Transit Fanny Pack",
+            "description": "<p>Brittany Bathgate shows how less is more.</p>",
+            "link": "",
+            "button_label": "Shop Shirts",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--secondary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-1",
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-0",
+        "template--15977492021425__7731d6df-9d53-4c34-9efb-98fac2fa365d-16769649642102c2d8-2"
+      ],
+      "custom_css": [
+        ".sf__btn {margin-top: 24px; padding-left: 25px; padding-right: 25px; border-color: #dadada;}"
+      ],
+      "settings": {
+        "heading": "Women's Accessories and Gifts",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_per_row": 3,
+        "item_gap": 30,
+        "item_gap_mobile": 16,
+        "card_style": "vertical",
+        "image_max_width": "100%",
+        "content_alignment": "start",
+        "hover_effect": "scaling-up",
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "sf-icon-box--large",
+        "animations": "inherit"
+      }
+    },
+    "721388d4-7859-4958-b320-c705800d31d9": {
+      "type": "lookbook",
+      "blocks": {
+        "65a3de0e-b3e4-4c97-b3e5-2f2f03d92449": {
+          "type": "lookbook-slider",
+          "settings": {
+            "sub_title": "Favorite products",
+            "title": "Matching Moments",
+            "text": "",
+            "content_alignment": "left",
+            "text_color": "black",
+            "background_color": "",
+            "image": "shopify://shop_images/Elegant_Blue_Skincare_Product_Showcase_Promotion_Instagram_Post_2.jpg",
+            "button_style": "dark",
+            "top_1": 32,
+            "left_1": 44,
+            "product_1": "article-one",
+            "top_2": 45,
+            "left_2": 50,
+            "product_2": "article-two",
+            "top_3": 87,
+            "left_3": 45,
+            "product_3": "article-three",
+            "top_4": 0,
+            "left_4": 0,
+            "product_4": "",
+            "top_5": 20,
+            "left_5": 0,
+            "product_5": "",
+            "product_per_view": "2",
+            "show_pagination": true,
+            "show_navigation": true,
+            "pcard_layout": "",
+            "pcard_image_ratio": "",
+            "show_vendor": false,
+            "hide_title": false
+          }
+        }
+      },
+      "block_order": [
+        "65a3de0e-b3e4-4c97-b3e5-2f2f03d92449"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "image_aspect_ratio": "3/4",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "de0a17f2-43a3-4a11-a2b7-f2092303f3a7": {
+      "type": "custom-content",
+      "blocks": {
+        "9ef56b70-2b08-4f55-b9ef-5a1539ae0225": {
+          "type": "handpicked_products",
+          "settings": {
+            "width": "50%",
+            "alignment": "center",
+            "subtitle": "Favorite products",
+            "title": "Shop this look",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-primary",
+            "button_size": "",
+            "text_size": "medium",
+            "content_alignment": "center",
+            "product_list": [
+              "seamless-crop-top",
+              "seamless-cycling-shorts",
+              "cateye-sunglasses"
+            ],
+            "product_to_show": 6,
+            "items_per_row": 2,
+            "item_gap": 30,
+            "pcard_layout": "",
+            "pcard_image_ratio": "",
+            "show_vendor": false,
+            "hide_title": false,
+            "enable_slider": true,
+            "show_pagination": true,
+            "show_navigation": true,
+            "use_scroll_mobile": true,
+            "item_gap_mobile": 16,
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "9a3e8bcd-5794-42eb-8e4e-2a5865b48e29": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_type": "shopify",
+            "video_link": "",
+            "ratio": "4:3",
+            "video_title": "",
+            "text_size": "medium",
+            "text_color": "white",
+            "play_style": "solid",
+            "play_size": "medium",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "width": "50%",
+            "alignment": "start",
+            "block_custom_class": "sf-video--custom-content",
+            "animations": "inherit"
+          }
+        },
+        "193adc84-8ce7-4336-b4c7-7142a2c81b10": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "9ef56b70-2b08-4f55-b9ef-5a1539ae0225",
+        "9a3e8bcd-5794-42eb-8e4e-2a5865b48e29",
+        "193adc84-8ce7-4336-b4c7-7142a2c81b10"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "m-custom-content--favorite-products"
+      }
+    },
+    "featured_collection_MFyHwd": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "heading": "Ponchos",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "collection": "articles",
+        "enable_flashsale": false,
+        "show_countdown": false,
+        "product_to_show": 8,
+        "items_per_row": 4,
+        "item_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "button_type": "link",
+        "button_text": "Shop more",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "infinite_load": false,
+        "max_page_load": 3,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "7ea56e8d-5794-4708-8812-8ee9604a3a21": {
+      "type": "custom-content",
+      "blocks": {
+        "template--15977492021425__7ea56e8d-5794-4708-8812-8ee9604a3a21-1678440566c64de1a8-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Elegant_Blue_Skincare_Product_Showcase_Promotion_Instagram_Post_2.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "animations": "zoom-fade"
+          }
+        },
+        "5c5877d5-05b2-4a50-81e3-78c3f6d0d833": {
+          "type": "image_card",
+          "settings": {
+            "width": "50%",
+            "content_position": "top_center",
+            "content_alignment": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "image": "shopify://shop_images/Elegant_Blue_Skincare_Product_Showcase_Promotion_Instagram_Post_1.jpg",
+            "link": "shopify://collections/all",
+            "title": "Because every little moment becomes a beautiful memory.",
+            "subtitle": "At Mimisti, we believe childhood is filled with little moments that deserve to be comfortable, joyful, and unforgettable. That's why every outfit is thoughtfully crafted with soft fabrics, premium quality, and timeless designs—so little girls can play, explore, and smile with confidence every day.",
+            "button_label": "Our Story",
+            "button_style": "m-button--primary",
+            "button_size": "m-button--large",
+            "button_fixed": true,
+            "use_content_above": true,
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "template--15977492021425__7ea56e8d-5794-4708-8812-8ee9604a3a21-1678440566c64de1a8-1",
+        "5c5877d5-05b2-4a50-81e3-78c3f6d0d833"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "w-full",
+        "background_color": "",
+        "gap": 0,
+        "use_scroll_mobile": false,
+        "gap_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "sf-custom--collection-banner"
+      }
+    },
+    "11cfb44f-b725-4daf-8ee7-4bbf2c63914d": {
+      "type": "instagram",
+      "disabled": true,
+      "settings": {
+        "heading": "Follow us Instagram",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "Tag <span class=\"text-black\">@minimog</span> in your Instagram photos for a chance to be featured here.<br>\nFind more inspiration on <a href=\"#\">our Instagram.</a>",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "layout": "grid",
+        "images_count": 5,
+        "grid_columns": 5,
+        "gap": 30,
+        "mobile_gap": 10,
+        "profile": "https://www.instagram.com/minimog.trendy/",
+        "button_label": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "brands_list_CVfwjn": {
+      "type": "brands-list",
+      "blocks": {
+        "image_JDPpCz": {
+          "type": "image",
+          "settings": {
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "image_GFJJ7m": {
+          "type": "image",
+          "settings": {
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "image_U4xNFb": {
+          "type": "image",
+          "settings": {
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        },
+        "image_eJWmVe": {
+          "type": "image",
+          "settings": {
+            "image_by_url": "",
+            "image_link": "",
+            "max_width": "150px"
+          }
+        }
+      },
+      "block_order": [
+        "image_JDPpCz",
+        "image_GFJJ7m",
+        "image_U4xNFb",
+        "image_eJWmVe"
+      ],
+      "name": "Brands list",
+      "settings": {
+        "heading": "WE'VE BEEN FEATURED IN",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_per_row": 4,
+        "enable_slider": true,
+        "autorotate": true,
+        "autorotate_speed": 3,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "16225125199f82d8fe": {
+      "type": "icon-box",
+      "blocks": {
+        "16225125199f82d8fe-0": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/2.png",
+            "image_by_url": "",
+            "title": "A SPECIAL GIFT FOR YOU",
+            "description": "<p>Every order comes with a complimentary gift, beautifully packed with love.</p>",
+            "link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/shop-all",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "16225125199f82d8fe-1": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/1.png",
+            "image_by_url": "",
+            "title": "SHOP WITH CONFIDENCE",
+            "description": "<p>Enjoy easy exchanges and a seamless shopping experience from checkout to delivery.</p>",
+            "link": "",
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "16225125199f82d8fe-2": {
+          "type": "iconbox",
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "image_by_url": "",
+            "title": "LET'S CHAT",
+            "description": "<p>Need help choosing the perfect outfit? We're just a WhatsApp message away.</p>",
+            "link": "",
+            "button_label": "Chat on WhatsApp",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "71deafbb-3baf-443a-a087-3f7b8af7b9fa": {
+          "type": "iconbox",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "image_by_url": "",
+            "title": "LET'S CHAT",
+            "description": "<p>Need help choosing the perfect outfit? We're just a WhatsApp message away.</p>",
+            "link": "",
+            "button_label": "Chat on WhatsApp",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "16225125199f82d8fe-0",
+        "16225125199f82d8fe-1",
+        "16225125199f82d8fe-2",
+        "71deafbb-3baf-443a-a087-3f7b8af7b9fa"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "#ffffff",
+        "item_per_row": 4,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "horizontal",
+        "image_max_width": "60px",
+        "content_alignment": "start",
+        "hover_effect": "none",
+        "enable_slider": false,
+        "show_pagination": true,
+        "show_navigation": true,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "padding_top": 46,
+        "padding_bottom": 46,
+        "custom_class": "m-icon-box--small",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "c72959ad-9620-4e94-ae33-1bde908e9701",
+    "1621243260e1af0c20",
+    "16225316461d1cff80",
+    "162251092958fcda7c",
+    "image_with_text_2_ARXz7P",
+    "7731d6df-9d53-4c34-9efb-98fac2fa365d",
+    "721388d4-7859-4958-b320-c705800d31d9",
+    "de0a17f2-43a3-4a11-a2b7-f2092303f3a7",
+    "featured_collection_MFyHwd",
+    "7ea56e8d-5794-4708-8812-8ee9604a3a21",
+    "11cfb44f-b725-4daf-8ee7-4bbf2c63914d",
+    "brands_list_CVfwjn",
+    "16225125199f82d8fe"
+  ]
+}
